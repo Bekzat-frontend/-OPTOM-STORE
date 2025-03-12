@@ -119,18 +119,6 @@ function SearchInput() {
       <SearchIcon className="search_icon" onClick={onClick} />
 
       {showResults && <div className="results"></div>}
-      {/* <input
-        placeholder="search"
-        className={click ? "open" : "close"}
-        onCanPlay={handleChange}
-        value={query}
-      />
-      <button
-        style={{ backgroundColor: "red", color: "yellow" }}
-        onClick={onClick}
-      >
-        click
-      </button> */}
     </WrapperAll>
   );
 }
