@@ -100,6 +100,12 @@ function SearchInput() {
       dispatch(getAll());
     }
   }, [loc.search]);
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      onClick();
+      setQuery("");
+    }
+  };
   return (
     <WrapperAll>
       <input
@@ -107,6 +113,7 @@ function SearchInput() {
         placeholder="search"
         value={query}
         onChange={handleChange}
+        onKeyDown={handleKeyDown}
       />
 
       <SearchIcon className="search_icon" onClick={onClick} />
